@@ -1,0 +1,110 @@
+/*
+  background: #850600
+  background: #AD0B04
+  background: #E0B577
+  background: #B07F4F
+  background: #3B0822
+*/
+html {
+ background: #e0b577;
+ font-family: Arial;
+ color: #ad0b04;
+}
+header {
+ background: #3b0822;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+header img {
+ width: 6em;
+ height: 6em;
+ margin: 0em 0.32em 0em;
+}
+section {
+ margin: 1em;
+}
+p {
+ color: #850600;
+ margin: 0;
+ line-height: 1.23em;
+}
+h1.main-header {
+ text-align: center;
+ letter-spacing: 0.02em;
+ padding-top: 0.4em;
+ font-size: 3.56em;
+ margin: auto;
+}
+.clear {
+ clear: both;
+}
+h3.submain-header {
+ text-align: center;
+ letter-spacing: 0.04em;
+ font-size: 0.84em;
+ margin: auto;
+ padding: 0.2em;
+}
+div.dashboard-main {
+ display: flex;
+ justify-content: space-between;
+ align-items: stretch;
+ overflow-x: scroll;
+ margin: 0.5em 0em;
+}
+.dashboard-item {
+ width: 33%;
+ height: 15em;
+ background: #b07f4f;
+ margin: 0em 0.5em 0em 0em;
+ flex-shrink: 0;
+ flex-grow: 1;
+}
+.dashboard-title, .dashboard-title h4 {
+ background: #3b0822;
+ margin: auto;
+ padding: 0.3em 0em;
+ flex-shrink: 0;
+ text-indent: 1em;
+}
+.dashboard-item.teams {
+ display: flex;
+ flex-flow: column;
+}
+section.team-item {
+ border-radius: 0.13em;
+ box-shadow: 0em 0em 0.02em 0.065em #3b0822;
+ padding: 0.25em;
+}
+.team-item p {
+ text-align: center;
+}
+.teams .dashboard-title {
+ margin: 0em;
+}
+.teams .dashboard-body {
+ overflow: scroll;
+}
+h5.team-name {
+ margin: 0.02em;
+ text-align: center;
+ letter-spacing: 0.02em;
+ font-weight: bold;
+}
+.flex-title {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.dashboard-title.flex-title h4 {
+ margin: 0em;
+}
+.flex-title button {
+ margin-right: 1em;
+ font-size: 0.87em;
+ background-color: #e0b577;
+ border: none;
+ border-radius: 0.35em;
+ color: #291523;
+}

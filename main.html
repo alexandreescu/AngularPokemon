@@ -1,0 +1,114 @@
+<DOCTYPE html ng-app="Main">
+<!-- THE POKEMON FOLDER WILL BE GENERATED WITH ANGULAR AS THE FRAMEWORK -->
+<head>
+ <link rel="stylesheet" type="text/css" href="main.css">
+ <link rel="stylesheet" type="text/css" href="site.css">
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+ <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+ <header>
+  <img src="http://img3.wikia.nocookie.net/__cb20140410195936/pokemon/images/archive/e/e1/20150101093317!025Pikachu_OS_anime_4.png">
+  <div class="main-title-text">
+   <h1 class="main-header">Pokemon</h1>
+   <h3 class="submain-header">Tournament Site</h3>
+  </div>
+  <img src="http://img4.wikia.nocookie.net/__cb20130617041608/sonicpokemon/images/a/a2/155_cyndaquil_by_pklucario.png">
+ </header>
+ <div class="dashboard-main">
+  <div class="dashboard-item profile" ng-controller="ProfileOverview as profile">
+   <div class="dashboard-title flex-title">
+    <h4>Your Profile</h4>
+    {{profile.absolute}}
+    <button class="title-button" id="editprofilebtn" ng-click="randomizeFavoriteTeam($event)">Edit Profile</button>
+   </div>
+   <div id="profilebody" class="dashboard-body">
+    <section>
+     <p><strong>Title:</strong> Champion</p>
+     <p><strong>Name:</strong> Alex Andreescu</p>
+     <p><strong>Age:</strong> 20</p>
+     <p id="favoriteteam"><strong>Favorite Team:</strong> (placeholder for now)</p>
+     <p id="rank"><strong>Rank:</strong> {{rank}}</p>
+    </section>
+   </div>
+  </div>
+  <div class="dashboard-item teams" ng-controller="TeamsOverview as teamset">
+   <div class="dashboard-title flex-title">
+    <h4>Your Teams</h4>
+    <button class="title-button" id="editteamsbtn" ng-click="editTeams($event)">Edit Teams</button>
+   </div>
+   <div id="teamsbody" class="dashboard-body">
+    <section class="team-item" ng-repeat="set in teamset.sets">
+     <h5 class="team-name">{{set.teamname}}</h5>
+     <p>{{set.pokelist}}</p>
+    </section>
+    <section class="team-item">
+     <h5 class="team-name">Blitz</h5>
+     <p>Rayquaza, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+     </section>
+    <section class="team-item">
+     <h5 class="team-name">Hero</h5>
+     <p>Pikachu, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+    </section>
+    <section class="team-item">
+     <h5 class="team-name">Zakum</h5>
+     <p>Jumpluff, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+    </section>
+    <section class="team-item">
+     <h5 class="team-name">Zealot</h5>
+     <p>Ariados, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+    </section>
+    <section class="team-item">
+     <h5 class="team-name">Green</h5>
+     <p>Salamence, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+    </section>
+    <section class="team-item">
+     <h5 class="team-name">Msuci</h5>
+     <p>Furret, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+    </section>
+    <section class="team-item">
+     <h5 class="team-name">Tandem</h5>
+     <p>Venusaur, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+    </section>
+    <section class="team-item">
+     <h5 class="team-name">Slider</h5>
+     <p>Steelix, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+    </section>
+    <section class="team-item">
+     <h5 class="team-name">Force</h5>
+     <p>Zapdos, Salamence, Salamence, Rayquaza, Salamence, Salamence</p>
+    </section>
+   </div>
+  </div>
+  <div class="dashboard-item dates">
+   <div class="dashboard-title">
+    <h4>Tourney Dates</h4>
+   </div>
+  </div>
+  <div class="dashboard-item rivals">
+   <div class="dashboard-title">
+    <h4>Rivals</h4>
+   </div>
+  </div>
+  <div class="dashboard-item recommended-team">
+   <div class="dashboard-title">
+    <h4>Recommened Team</h4>
+   </div>
+  </div>
+  <div class="dashboard-item rank">
+   <div class="dashboard-title">
+    <h4>Your Rank</h4>
+   </div>
+  </div>
+  <div class="dashboard-item ladder">
+   <div class="dashboard-title">
+    <h4>Pokemon Ladder</h4>
+   </div>
+  </div>
+  <div class="dashboard-item meme">
+   <div class="dashboard-title">
+    <h4>Meme of the Day</h4>
+   </div>
+  </div>
+ </div>
+</body>

@@ -1,0 +1,69 @@
+<DOCTYPE html ng-app="Team">
+<head>
+ <link rel="stylesheet" type="text/css" href="teamshome.css">
+ <link rel="stylesheet" type="text/css" href="../site.css">
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+ <script type="text/javascript" src="teamshome.js"></script>
+</head>
+<body>
+ <header>
+  <h1 class="teams-header">Pokemon Teams</h1>
+ </header>
+ <div class="flex-teams-main">
+  <section id="create" class="flex-teams-item" ng-controller="CreateTeam as createteam">
+   <div class="teams-item-title">
+    <h3>Create new Pokemon team</h3>
+   </div>
+   <div class="createform">
+    <label>Name of Team:<input type="text" name="teamtitle" maxlength="16"><br></label>
+    <span>Pokemon to include on team:</span><br>
+    <input type="text" name="pokemon1" maxlength="10"><br>
+    <input type="text" name="pokemon2" maxlength="10"><br>
+    <input type="text" name="pokemon3" maxlength="10"><br>
+    <input type="text" name="pokemon4" maxlength="10"><br>
+    <input type="text" name="pokemon5" maxlength="10"><br>
+    <input type="text" name="pokemon6" maxlength="10"><br>
+   </div>
+   <div class="submitbtn">
+    <button name="submit" ng-click="creation($event)">Create Team</button> <!-- this button runs creation method AND emits to TeamsListView to update the html that displays the teams -->
+   </div>
+   <div class="warning"><!-- (Need to style this section to not look shitty) --></div>
+  </section>
+  <section id="edit" class="flex-teams-item" ng-controller="EditTeam as editteam">
+   <div class="teams-item-title">
+    <h3>Edit existing Pokemon team</h3>
+   </div>
+   <div class="editform">
+    <label>Select team to edit:
+     <select id="editteamslist" ng-model="editmodel" ng-change="edition()"><!-- ng-model/ng-change are paired together so this works -->
+      <option ng-repeat="editset in editteam.editsets track by $index" name="editset.teamname">{{editset.teamname}}</option>
+     </select>
+    </label>
+    <div id="editteamsfields" class="editteamsfields">
+     <label>Team Name:<input type="text" name="editteamtitle" ng-keyup="editRecord($event)" maxlength="16"><br></label>
+     <span>Pokemon:</span><br>
+     <input type="text" name="editpokemon0" maxlength="10" ng-keyup="editRecord($event)"><br>
+     <input type="text" name="editpokemon1" maxlength="10" ng-keyup="editRecord($event)"><br>
+     <input type="text" name="editpokemon2" maxlength="10" ng-keyup="editRecord($event)"><br>
+     <input type="text" name="editpokemon3" maxlength="10" ng-keyup="editRecord($event)"><br>
+     <input type="text" name="editpokemon4" maxlength="10" ng-keyup="editRecord($event)"><br>
+     <input type="text" name="editpokemon5" maxlength="10" ng-keyup="editRecord($event)"><br>
+    </div>
+    <div class="submitbtn">
+     <button name="editsubmit" ng-click="editionSubmit($event)">Update Team</button>
+    </div>
+   </div>
+  </section>
+ </div>
+ <div class="flex-teams-list" ng-controller="TeamsListView as teamslist">
+  <section class="teams-list-item" ng-repeat="set in teamslist.sets">
+   <h4 class="team-name">{{set.teamname}}</h4>
+   <ul class="nodot">
+    <li ng-repeat="poke in set.pokes track by $index"> <!-- [track by $index] is used to resolve duplicates error -->
+     {{poke}}<br><br>
+    </li>
+   </ul>
+  </section>
+ </div>
+ <footer><a href="../main.html">Back to Home</a><<\that link is styled like trash, fix later</footer>
+</body>

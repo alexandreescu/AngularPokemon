@@ -1,0 +1,17 @@
+p, li, span, label {
+ color: #850600;
+}
+:focus {
+ outline: none;
+}
+button:hover {
+  background-color: #e8c087;
+}
+button {
+ margin: auto;
+ font-size: 0.87em;
+ background-color: #e0b577;
+ border: none;
+ border-radius: 0.35em;
+ color: #291523;
+}
