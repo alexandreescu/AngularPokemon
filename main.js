@@ -14,14 +14,7 @@ console.log("poop");
  main.controller('ProfileOverview', ['$scope', function($scope){ //controller for profile dashboard
   // below is to increase rank by 1 until 10, and each click will randomize the "Favorite Team" html
   $scope.randomizeFavoriteTeam = function(){
-   teamnameindex = ~~(Math.random() * teams.length);
-   if(teams[teamnameindex] != undefined){
-    if(rank != 10){
-     rank = rank + 1;
-     document.getElementById("rank").innerHTML = "<strong>Rank:</strong> " + rank;
-    }
-    document.getElementById("favoriteteam").innerHTML = "<strong>Favorite Team:</strong> " + teams[teamnameindex].teamname;
-   }
+   window.location.href = "profile/profile.html";
   }
   // above end
   }])

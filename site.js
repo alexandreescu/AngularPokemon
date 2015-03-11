@@ -1,4 +1,5 @@
 (function(){
+ // GO BACK AND USE MINIFIED VERSIONS OF ANGULAR INSTEAD OF NONMINIFIED >> USING NONMIN VERSIONS TO READ CONSOLE ERRORS
  var pokemonTeams = [{teamname: 'Zephyr', pokes: ['Pikachu', 'Yanma', 'Greninja', 'Dusclops', 'Hoppip', 'Golem']},
                      {teamname: 'Blitz', pokes: ['Houndour', 'Nidoran', 'Clefable', 'Turtwig', 'Klefki', 'Rapidash']},
                      {teamname: 'Strike', pokes: ['Squirtle', 'Nidoking', 'Crawdaunt', 'Fearow', 'Buizel', 'Tauros']},
