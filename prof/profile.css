@@ -1,0 +1,52 @@
+/*
+  background: #850600
+  background: #AD0B04
+  background: #E0B577
+  background: #B07F4F
+  background: #3B0822
+*/
+html {
+ background: #e0b577;
+ font-family: Arial;
+ color: #ad0b04;
+}
+header {
+ background: #3b0822;
+}
+p, li {
+ color: #850600;
+}
+h1.profile-header {
+ text-align: center;
+ letter-spacing: 0.02em;
+ padding: 0.4em 0em;
+ font-size: 3.56em;
+ margin: auto;
+}
+section, section.title {
+ border-radius: 1em;
+ box-shadow: 0em 0em 0.02em 0.065em #3b0822;
+ padding: .5em;
+ margin: 1em auto;
+ background-color: #dcb273;
+ width: 90%;
+ text-align: center;
+}
+section.content {
+ background-color: #b88454;
+}
+div.profile-info {
+ width: 60%;
+ max-height: 99%;
+ margin: auto;
+ text-align: initial;
+ padding: .5em 1em;
+ border-left: .15em solid black;
+ border-right: .15em solid black;
+}
+.uneditable {
+ border-top: .15em solid black;
+}
+div.profile-info button {
+ float: right;
+}

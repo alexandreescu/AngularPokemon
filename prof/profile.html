@@ -1,0 +1,30 @@
+<DOCTYPE html ng-app="Profile">
+<head>
+ <link rel="stylesheet" text="text/css" href="../site.css">
+ <link rel="stylesheet" text="text/css" href="profile.css">
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+ <script type="text/javascript" src="profile.js"></script>
+</head>
+<body>
+ <header>
+  <h1 class="profile-header">Your Profile poop</h1>
+ </header>
+ <div class="content">
+  <section class="title">
+   <h2>Edit your profile here</h2>
+   <section class="content">
+    <div class="profile-info editable" ng-controller="EditProfile as edit">
+     <p>First Name: Alex<button ng-click="editfield($event)">Edit First Name</button></p>
+     <p>Last Name: Andreescu<button ng-click="editfield($event)">Edit Last Name</button></p>
+     <p>Age: 20<button ng-click="editfield($event)">Edit Age</button></p>
+     <p>Favorite Team: Anthem<button ng-click="editfield($event)">Edit Favorite Team</button></p>
+     <p>Email: dikodude@yahoo.com<button ng-click="editfield($event)">Edit Email</button></p>
+    </div>
+    <div class="profile-info uneditable">
+     <p>Rank: Beginner</p>
+    </div>
+   </section>
+  </section>
+ </div>
+ <div><a href="../main.html">Back to Home</a></div>
+</body>
